@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Text-to-Speech + Clipboard Utility",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "clipboardRead",   
+      "clipboardWrite", 
+      "storage"         
+    ],
+    "action": {
+      "default_popup": "extui.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content-script.js"]
+      }
+    ]
+  }
